@@ -1,0 +1,35 @@
+# Computer Vision — reading camera frames and drawing on images
+opencv-python==4.10.0.84
+
+# YOLOv8 — ML model for detecting and tracking vehicles
+ultralytics==8.3.0
+
+# Numerical arrays — every image is a numpy array under the hood
+numpy==1.26.4
+
+# Data analysis — aggregating parking statistics and history
+pandas==2.2.3
+
+# Database ORM — saving parking events to SQLite without raw SQL
+sqlalchemy==2.0.36
+
+# Web dashboard — live stats and camera feed in the browser
+streamlit==1.40.0
+
+# Telegram bot — push notifications when a parking spot opens up
+python-telegram-bot==21.6
+
+# Config management — reads and validates values from .env file
+pydantic-settings==2.6.1
+
+# Loads .env file into environment variables at runtime
+python-dotenv==1.0.1
+
+# Automated testing framework
+pytest==8.3.3
+
+# PostgreSQL driver — allows SQLAlchemy to talk to PostgreSQL
+psycopg2-binary==2.9.10
+
+# Linter and formatter — enforces code style and catches bugs early
+ruff==0.8.0

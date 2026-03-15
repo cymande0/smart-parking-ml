@@ -1,0 +1,27 @@
+services:
+  db:
+    # Official PostgreSQL image from Docker Hub
+    image: postgres:16
+
+    # Always restart the container if it crashes or after PC reboot
+    restart: always
+
+    environment:
+      # Database credentials — values loaded from your .env file
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+
+    ports:
+      # Map port 5432 inside container to port 5432 on your machine
+      # Format: "host_port:container_port"
+      - "5432:5432"
+
+    volumes:
+      # Store database files on your machine, not inside the container
+      # This means data survives container restarts and deletions
+      - postgres_data:/var/lib/postgresql/data
+
+# Named volume — Docker manages this folder on your machine
+volumes:
+  postgres_data:
